@@ -15,7 +15,7 @@ export function AboutSection() {
           >
             <div className="relative h-96 rounded-xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1517248366103-0174c6d4f6c9?w=800&q=80"
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop"
                 alt="Restaurant interior"
                 fill
                 className="object-cover"

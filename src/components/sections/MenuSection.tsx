@@ -7,25 +7,25 @@ const menuItems = [
     name: "Matoke",
     description: "Traditional steamed green bananas with beef stew",
     price: "UGX 15,000",
-    image: "https://images.unsplash.com/photo-1543352634-94d889918f2b?w=600&q=80"
+    image: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600&auto=format&fit=crop"
   },
   {
     name: "Luwombo",
     description: "Steamed fish or chicken in banana leaves with vegetables",
     price: "UGX 18,000",
-    image: "https://images.unsplash.com/photo-1565296506944-5f3d50a0e5b0?w=600&q=80"
+    image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=600&auto=format&fit=crop"
   },
   {
     name: "Rolex",
     description: "Chapati rolled with eggs, vegetables and meat",
     price: "UGX 8,000",
-    image: "https://images.unsplash.com/photo-1572807603517-558a7d7f6fdb?w=600&q=80"
+    image: "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=600&auto=format&fit=crop"
   },
   {
     name: "Posho",
     description: "Maize meal porridge with beans and vegetables",
     price: "UGX 12,000",
-    image: "https://images.unsplash.com/photo-1512621067550-c2c7b8c8c8c8?w=600&q=80"
+    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600&auto=format&fit=crop"
   }
 ]
 
