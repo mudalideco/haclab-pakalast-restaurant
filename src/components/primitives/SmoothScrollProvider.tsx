@@ -1,28 +1,32 @@
-'use client'
-import { useEffect } from 'react'
-import Lenis from 'lenis'
+'use client';
 
-// Organic motion params: lerp 0.05 for smooth inertia
-const LERP = 0.05
+import React, { createContext, useContext, useEffect } from 'react';
+import Lenis from 'lenis';
+
+const SmoothScrollContext = createContext<Lenis | null>(null);
 
 export function SmoothScrollProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
-    const lenis = new Lenis({ 
-      lerp: LERP, 
-      smoothWheel: true 
-    })
-    
-    function raf(time: number) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
-    }
-    
-    requestAnimationFrame(raf)
-    
+    const lenis = new Lenis({
+      lerp: 0.08,
+      smoothWheel: true,
+    });
+
+    const animate = () => {
+      lenis.raf(performance.now());
+      requestAnimationFrame(animate);
+    };
+
+    requestAnimationFrame(animate);
+
     return () => {
-      lenis.destroy()
-    }
-  }, [])
-  
-  return <>{children}</>
+      lenis.destroy();
+    };
+  }, []);
+
+  return <SmoothScrollContext.Provider value={null}>{children}</SmoothScrollContext.Provider>;
+}
+
+export function useSmoothScroll(): Lenis | null {
+  return useContext(SmoothScrollContext);
 }
